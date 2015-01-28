@@ -1,16 +1,23 @@
 import os
 import re
 import datetime
-from datetime import timedelta
 
-timeStructure = '%Y/%m/%d %H:%M:%S'                # Format for date/time
-timeDiff = timedelta(hours=12)                     # Amount of time to wait between updates
-scheduleFile = '~/.RedditWallpaper/schedule.txt'   # File where last update time is stored
+from datetime import timedelta
+from os.path import expanduser
+
+
+timeStructure = '%Y/%m/%d %H:%M:%S'     # Format for date/time
+timeDiff = timedelta(hours=12)          # Amount of time to wait between updates
+scheduleFile = '.RedditWallpaper/schedule.txt'         # File where last update time is stored
 
 def main():
+  
+  global scheduleFile
+  scheduleFile = expanduser("~") + "/" + scheduleFile
 
   # If nothing has been written to schedule.txt, this is the first time grabbing images 
-  if os.path.isfile(scheduleFile) == False:
+  if os.stat(scheduleFile).st_size == 0:
+    print "Empty"
     grabImages()
     return
 
@@ -19,7 +26,7 @@ def main():
   lastTimeUpdated = f.readline().rstrip('\n')
 
   # Grab the current time and strip the decimal place following the time
-  curTime = datetime.datetime.now
+  curTime = datetime.datetime.now()
   curTime = curTime.strftime(timeStructure)
   curTime = datetime.datetime.strptime(curTime, timeStructure)
 

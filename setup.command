@@ -13,6 +13,7 @@ os.system("rm mycron")
 os.system("mkdir ~/.RedditWallpaper");
 os.system("mkdir ~/Desktop/RedditWallpaper");
 os.system("cp ~/Downloads/RedditWallpaper/src/* ~/.RedditWallpaper");
+os.system("touch ~/.RedditWallpaper/schedule.txt");
 
 # Load new images right away to initially populate the images directory
 os.system("python ~/.RedditWallpaper/grabImages.py");
