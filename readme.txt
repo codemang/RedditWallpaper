@@ -1,4 +1,5 @@
-******** INSTRUCTIONS ********
+INSTRUCTIONS
+============
 
 1) Make sure the new RedditWallpaper folder that you just unzipped is in your downloads folder.
 
@@ -15,4 +16,4 @@
 
 7) Still in the System Prefrence page, check the box specifying 'Change Picture'. This ensures your computer cycles through all the photos. Change the delay between photos as you desire. 
 
-DONE!!!!!!
+**DONE!!!!!!**
