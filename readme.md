@@ -1,5 +1,10 @@
-INSTRUCTIONS
-============
+Reddit Wallpaper 
+================
+
+Everyday on the popular subreddit EarthPorn there are new, beautiful pictures of nature. This script downloads the top 10 pictures from the subreddit every 12 hours and makes it your desktop wallpaper
+
+Install
+-------
 
 1) Make sure the new RedditWallpaper folder that you just unzipped is in your downloads folder.
 
